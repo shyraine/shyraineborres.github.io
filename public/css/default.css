@@ -74,7 +74,7 @@ audio:not([controls]) {
    height: 0;
 }
 
-[hidden] { display: none; }
+/* [hidden] { display: none; } */
 
 code, kbd, pre, samp {
    font-family: monospace, serif;
@@ -182,7 +182,7 @@ p.lead {
 the body tag due to rendering problems in some browsers */
 em { font: 15px/30px 'opensans-italic', sans-serif; }
 strong, b { font: 15px/30px 'opensans-bold', sans-serif; }
-small { font-size: 11px; line-height: inherit; }
+small { font-size: 13px; line-height: inherit; }
 
 /*	Blockquotes */
 blockquote {
@@ -315,6 +315,7 @@ ol ol li, ol ul li { margin-bottom: 6px; }
 li { line-height: 18px; margin-bottom: 12px; }
 ul.large li { }
 li p { }
+
 
 /* ---------------------------------------------------------------------
 /*  Stats Tab Markup
@@ -449,8 +450,13 @@ dd { margin: 0 0 0 20px; }
 /*  5. Images  --------------------------------------------------------- */
 
 img {
+   /* max-width: 100%;
+   height: auto; */
    max-width: 100%;
-   height: auto;
+   width: 160px;
+   height: 160px;
+   border-radius: 60%;
+   border: 5px solid #fff;
 }
 img.pull-right { margin: 12px 0px 0px 18px; }
 img.pull-left { margin: 12px 18px 0px 0px; }

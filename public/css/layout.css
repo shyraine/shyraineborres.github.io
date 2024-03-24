@@ -33,7 +33,12 @@ header {
    height: 800px;
    min-height: 500px;
    width: 100%;
-   background: #161415 url(../images/header-background.jpg) no-repeat top center;
+   /* background: #161415 url(../images/header-background.jpg) no-repeat top center; */
+   /* background: rgb(131,131,138); */
+   background: linear-gradient(135deg, rgb(36, 36, 36) 0%, rgb(26, 26, 28) 50%, rgb(18, 14, 14) 100%);
+   /* background-color: fff; */
+   /* background: linear-gradient(90deg, #0000 calc(100% - 5px), rgb(236, 236, 239) 0); */
+   /* background-size: calc((100% - 5*5px)/6 + 5px) 100%; */
    background-size: cover !important;
 	-webkit-background-size: cover !important;
    text-align: center;
@@ -139,6 +144,7 @@ header .scrolldown a:hover { color: #11ABB0; }
    position: fixed;
    left: 0;
    top: 0;
+   background-color: #333;
 }
 .opaque { background-color: #333; }
 
@@ -162,7 +168,6 @@ ul#nav li {
 /* Links */
 ul#nav li a {
 
-/* 8px padding top + 8px padding bottom + 32px line-height = 48px */
 
    display: inline-block;
    padding: 8px 13px;
@@ -179,7 +184,7 @@ ul#nav li a {
 }
 
 ul#nav li a:active { background-color: transparent !important; }
-ul#nav li.current a { color: #F06000; }
+ul#nav li.current a { color: #11ABB0; }
 
 
 /* ------------------------------------------------------------------ */
@@ -203,7 +208,7 @@ ul#nav li.current a { color: #F06000; }
 }
 #about p {
    line-height: 30px;
-   color: #7A7A7A;
+   color: #ede7e7;
 }
 #about .profile-pic {
    position: relative;
@@ -255,19 +260,19 @@ ul#nav li.current a { color: #F06000; }
    padding-bottom: 6px;
 }
 #resume h3 {
-   font: 25px/30px 'opensans-bold', sans-serif;
+   font: 20px/25px 'opensans-bold', sans-serif;
 }
 
 #resume .header-col { padding-top: 9px; }
 #resume .main-col { padding-right: 10%; }
 
-.education, .work {
+.certifications, .work {
    margin-bottom: 48px;
    padding-bottom: 24px;
    border-bottom: 1px solid #E8E8E8;
 }
 #resume .info {
-   font: 16px/24px 'librebaskerville-italic', serif;
+   font: 16px/24px 'opensans-regular', serif;
    color: #6E7881;
    margin-bottom: 18px;
    margin-top: 9px;
@@ -286,22 +291,34 @@ ul#nav li.current a { color: #F06000; }
 /*----------------------------------------------*/
 
 .bars {
-	width: 95%;
+	/* width: 25%; */ 
 	float: left;
-	padding: 0;
-	text-align: left;
+	/* padding: 0; */
+	/* text-align: left; */ 
 }
 .bars .skills {
-  	margin-top: 36px;
-   list-style: none;
+  	/* margin-top: 36px; */
+   display: flex;
+   flex-wrap: wrap;
 }
-.bars li {
+
+.skills_div {
+   padding: .75rem 1.75rem;
+   margin-bottom: 1.5rem;
+   margin-right: 1.5rem;
+   font-size: 1.6rem;
+   background: rgba(153, 153, 153, 0.2);
+   border-radius: 5px;
+   font-weight: bold;
+   color: #666;
+}
+/* .bars li {
    position: relative;
   	margin-bottom: 60px;
   	background: #ccc;
   	height: 42px;
   	border-radius: 3px;
-}
+} */
 .bars li em {
 	font: 15px 'opensans-bold', sans-serif;
    color: #313131;
@@ -635,8 +652,17 @@ call-to-action .button {
 }
 
 /* ------------------------------------------------------------------
-/* g. Testimonials
+/* g. Certifications
 /* ------------------------------------------------------------------ */
+
+.certifications_list {
+   padding-bottom: .25rem;
+   margin-bottom: .05rem;
+   font-size: 1.5rem;
+   border-radius: 5px;
+   font-weight: bold;
+   color: #666;
+}
 
 #testimonials {
    background: #1F1F1F url(../images/testimonials-bg.jpg) no-repeat center center;
@@ -652,12 +678,6 @@ call-to-action .button {
 #testimonials .text-container {
    padding-top: 96px;
    padding-bottom: 66px;
-}
-#testimonials h1 {
-   font: 18px/24px 'opensans-bold', sans-serif;   
-   text-transform: uppercase;
-   letter-spacing: 3px;
-   color: #fff;
 }
 #testimonials h1 span { display: none; }
 #testimonials .header-col { padding-top: 9px; }
@@ -791,7 +811,7 @@ call-to-action .button {
    background: #191919;
    padding-top: 96px;
    padding-bottom: 102px;
-   color: #636363;
+   color: #ede7e7;
 }
 #contact .section-head { margin-bottom: 42px; }
 
@@ -823,7 +843,7 @@ call-to-action .button {
    margin-bottom: 6px;
 }
 #contact p.lead {
-   font: 18px/36px 'opensans-light', sans-serif;
+   font: 16px/34px 'opensans-bold', sans-serif;
    padding-right: 3%;
 }
 #contact .header-col { padding-top: 6px; }
